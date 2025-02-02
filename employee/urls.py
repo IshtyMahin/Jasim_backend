@@ -13,5 +13,6 @@ urlpatterns = [
     path('active/<uid64>/<token>/', views.activate, name = 'activate'),
     path('login/', views.EmployeeLoginApiView.as_view(), name='login'),
     path('logout/', views.EmployeeLogoutView.as_view(), name='logout'),
+    path('verify_token/', views.VerifyTokenAPIView.as_view(), name='verify_token'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
